@@ -1,0 +1,44 @@
+'''0,6) Faça um programa que leia os seguintes dados de dois países: nome, a quantidade de habitantes  e  taxa  de  crescimento anual. O programa deve informar o nome do país com menor população e, se for possível  que  o número de habitantes do  país  com  menor população  ultrapasse o número de habitantes do  país  com  maior  população  (taxa de  crescimento  do  país  com menor  população  maior  que  a  taxa  de  crescimento  do país  com  maior  população), informar quantos anos serão necessários para  que  o número de habitantes do país de menor população ultrapasse o do outro; caso contrário, deve apresentar uma mensagem informando que “ A população do país <<nome do país com menor população>> não ultrapassará a população do <<nome do país com maior população>>.'''
+
+#Ler: 2 países: nome; quantidade de habitantes; taxa e crescimento anual.
+#Informar: Nome do país com menor população; se é possível que o menor ultrapasse o maior e em quantos anos; do contrário:  “ A população do país <<nome do país com menor população>> não ultrapassará a população do <<nome do país com maior população>>.
+
+#Variáveis
+pais1 = input('Digite o nome do 1° País: ')
+habitantes1 = int(input('Digite a quantidade de habitantes: '))
+taxaCrescimento1 = float(input('Digite a taxa de crescimento: '))
+pais2 = input('Digite o nome do 2º País: ')
+habitantes2 = int(input('Digite a quantidade de habitantes: '))
+taxaCrescimento2 = float(input('Digite a taxa de crescimento: '))
+ciclo = 0
+#Se os dois países tiverem o mesmo número de habitantes
+if habitantes1 == habitantes2:
+	print('Ambos países possuem a mesma quantidade de população!')
+	if taxaCrescimento1 > taxaCrescimento2:
+		print('A população do ', pais1, 'ultrapassará a população do ', pais2, 'em', taxaCrescimento1 - taxaCrescimento2, '% nesse ano')
+	elif taxaCrescimento2 > taxaCrescimento1:		
+		print('A população do ', pais2, 'ultrapassará a população do ', pais1, 'em', taxaCrescimento2 - taxaCrescimento1, '% nesse ano')
+	else:
+		print('Os países manterão o mesmo número de habitantes')
+		
+# Cálculo do menor pais	
+if habitantes1 < habitantes2:
+	if taxaCrescimento1 > taxaCrescimento2:
+		while habitantes1 < habitantes2:
+			taxaCrescimento1 * habitantes1 + habitantes1
+			taxaCrescimento2 * habitantes2 = habitantes2
+			ciclo += 1
+		print('O país', pais1, 'é menor que o país', pais2, '.'É possível que aquele ultrapasse a população deste em: ', ciclo, 'anos.')
+	else:
+		print('A população do país ', pais1', ' não ultrapassará a população do', pais2, '.')
+
+if habitantes2 < habitantes1:
+	if taxaCrescimento2 > taxaCrescimento1:
+		while habitantes2 < habitantes1:
+			taxaCrescimento2 * habitantes2 + habitantes2
+			taxaCrescimento1 * habitantes1 = habitantes1
+			ciclo += 1
+		print('O país', pais2, 'é menor que o país', pais1, '.'É possível que aquele ultrapasse a população deste em: ', ciclo, 'anos.')
+	else:
+		print('A população do país ', pais2', ' não ultrapassará a população do', pais1, '.')
+	
